@@ -18,7 +18,7 @@ jobs:
                 --template-file template.yml \
                 --stack-name myStack-${CIRCLE_WORKFLOW_ID:0:5} \
                 --region us-east-1
-	- run : echo launched an ec2 on aws
+        - run : echo launched an ec2 on aws
   myjob1:  # Choose any name, such as `build`
       # The primary container, where your job's commands will run
       docker:
@@ -34,4 +34,4 @@ workflows:
       - create_infrastructure
       - myjob1
 	 requires:
-		- create_infrastructure
+          - create_infrastructure
