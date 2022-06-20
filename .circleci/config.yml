@@ -33,5 +33,3 @@ workflows:
     jobs:
       - create_infrastructure
       - myjob1
-	 requires:
-          - create_infrastructure
