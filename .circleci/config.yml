@@ -39,6 +39,11 @@ workflows:
   # Name the workflow
   myWorkflow:
     jobs:
+<<<<<<< HEAD
       - create_infrastructure
       - configure_infrastructure
       
+=======
+      - create_infrastructure 
+      
+>>>>>>> fed1b7def082df283cfa462b9cc32e23f1ac30f7
