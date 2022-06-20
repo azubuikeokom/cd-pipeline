@@ -19,17 +19,10 @@ jobs:
                 --stack-name myStack-${CIRCLE_WORKFLOW_ID:0:5} \
                 --region us-east-1
         - run : echo launched an ec2 on aws
-  myjob1:  # Choose any name, such as `build`
-      # The primary container, where your job's commands will run
-      docker:
-        - image: 
-      steps:
-        - checkout # check out the code in the project directory
-        - run: echo "A previous job just launched an ec2 on aws cloud" # run the `echo` command
 # Sequential workflow
 workflows:
   # Name the workflow
   myWorkflow:
     jobs:
       - create_infrastructure
-      - myjob1
+      
